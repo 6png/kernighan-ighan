@@ -1,3 +1,5 @@
+// rewrite f->c to use function for conversion
+
 #include <stdio.h>
 
 int FtoC(int f) {

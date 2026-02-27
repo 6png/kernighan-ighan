@@ -1,3 +1,5 @@
+// replace tab backspace backslash with \t \b \\
+
 #include <stdio.h>
 
 int main() {

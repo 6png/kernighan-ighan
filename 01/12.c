@@ -1,7 +1,9 @@
+// print input one word per line
+
 #include <stdio.h>
 
 int main() {
-	int c, inWord;
+	int c, inWord=0; // missed initialization
 
 	while ((c = getchar()) != EOF) {
 		if (c == ' ' || c == '\n' || c == '\t') {

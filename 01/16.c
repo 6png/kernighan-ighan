@@ -1,3 +1,6 @@
+// edit main to print 
+	// longest line <=10000 chars but actual length even if >10000
+
 #include <stdio.h>
 #define MAXLINE 10000
 

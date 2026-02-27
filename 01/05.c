@@ -1,3 +1,5 @@
+// reverse f->c table 
+
 #include <stdio.h>
 
 int main() {

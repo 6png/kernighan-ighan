@@ -1,3 +1,5 @@
+// histogram of char frequencies
+
 #include <stdio.h>
 #include <limits.h>
 

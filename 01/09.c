@@ -1,3 +1,6 @@
+// output input with only single spaces
+// eg all multi-whitespace stretches replaced with single space
+
 #include <stdio.h>
 
 int main() {

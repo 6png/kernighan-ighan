@@ -1,15 +1,15 @@
+// remove trailing blanks tabs; delete blank lines
+
 #include <stdio.h>
 
 int main() {
 	int c;
 	while ((c = getchar()) != EOF) {
 		int isBlankLine=1;
-		int pastFirstNonBlank=0;
 		while ((c = getchar()) != '\n') {
-			if ((c != ' ' && c != '\t') || pastFirstNonBlank) {
+			if (c != ' ' && c != '\t') {
 				putchar(c);
 				isBlankLine=0;
-				pastFirstNonBlank=1;
 			}
 		}
 		if (!isBlankLine) {

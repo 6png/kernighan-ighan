@@ -1,3 +1,5 @@
+// histogram of word length frequencies
+
 #include <stdio.h>
 #include <ctype.h>
 
@@ -18,6 +20,7 @@ int main() {
 			charCt=0;
 		}
 	}
+	++freqs[charCt-1]; // handle wordEOF
 
 	for (int i=0; i<MAX_WORD_LENGTH; i++) {
 		printf("%6d: ", i);

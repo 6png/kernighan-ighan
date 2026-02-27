@@ -1,3 +1,5 @@
+// add print heading above table
+
 #include <stdio.h>
 
 int main() {

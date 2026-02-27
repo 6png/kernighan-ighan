@@ -1,3 +1,5 @@
+// print all lines >80 chars
+
 #include <stdio.h>
 
 int main() {
