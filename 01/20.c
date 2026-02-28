@@ -14,8 +14,8 @@ int main() {
             len=0;
         } else {
             if (c == '\t') {
-                for (int i=0; i<4-(len%4); i++) {
-                    putchar('\n');
+                for (int i=0; i<TAB-(len%TAB); i++) {
+                    putchar(' ');
                     ++len;
                 }
             } else {
@@ -24,18 +24,8 @@ int main() {
             }
         }
     }
-    
-    if (len>=0) {
-        if (c == '\t') {
-            for (int i=0; i<4-(len%4); i++) {
-                putchar('\n');
-                ++len;
-            }
-        } else {
-            putchar(c);
-            ++len;
-        }
-    }
 
-    putchar('\n');
+    if (len != 0) {
+        putchar('\n');
+    }
 }
