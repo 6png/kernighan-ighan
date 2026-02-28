@@ -11,16 +11,15 @@ int main() {
 
 	while ((c = getchar()) != EOF) {
 		if (c == '\n') {
-			if (isBlankLine == 0) {
-				putchar('\n');
-				isBlankLine=1;
-			}
-			wsCt;
+			wsCt=0;
 		} else if (c == ' ' || c == '\t') {
 			if (wsCt<BUF_SIZE) {
 				buffer[wsCt++] = c;
 			}
 		} else {
+            if (isBlankLine == 0) {
+				putchar('\n');
+			}
 			for (int j=0; j<wsCt; j++) {
 				putchar(buffer[j]);
 			}
@@ -30,7 +29,7 @@ int main() {
 		}
 	}
 
-	if (isBlankLine==0) {
+	if (!isBlankLine) {
 		putchar('\n');
 	}
 }
