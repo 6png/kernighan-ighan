@@ -2,10 +2,17 @@
 
 #include <stdio.h>
 
-void setbits(x, p, n, y) {
-    
+unsigned setbits(unsigned x, int p, int n, unsigned y) {
+    unsigned mask = (1 << n) - 1;
+    int shft = p-n+1;
+    y = (y & mask) << shft;
+    x = x & ~(mask << shft);
+    return x | y;
 }
 
 int main() {
-
+    unsigned x=0xFF, y=0x02;
+    int p=4, n=3;
+    printf("%x\n", x);
+    printf("%x\n", setbits(x, p, n, y));
 }
