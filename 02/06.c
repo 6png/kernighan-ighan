@@ -11,8 +11,5 @@ unsigned setbits(unsigned x, int p, int n, unsigned y) {
 }
 
 int main() {
-    unsigned x=0xFF, y=0x02;
-    int p=4, n=3;
-    printf("%x\n", x);
-    printf("%x\n", setbits(x, p, n, y));
+    printf("%x\n", setbits(0xFF, 4, 3, 0x02));
 }
