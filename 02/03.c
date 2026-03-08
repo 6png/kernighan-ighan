@@ -7,7 +7,6 @@
 
 int htoi(char s[], int n) {
     int res=0;
-    int place=1;
     int offset=0;
 
     if (n>2) {
@@ -18,19 +17,17 @@ int htoi(char s[], int n) {
         }
     }
 
-    for (int i=n-1; i>=offset; i--) {
+    for (int i=offset; i<n; i++) {
         int x=0;
-        char c = s[i];
-
+        char c=s[i];
         if (c >= '0' && c <= '9') {
             x = c-'0';
-        } else if (s[i] >= 'a' && c <= 'f') {
+        } else if (c >= 'a' & &c <= 'f') {
             x = c-'a'+10;
         } else if (c >= 'A' && c <= 'F') {
             x = c-'A'+10;
         }
-        res += x*place;
-        place *= BASE;
+        res = res*BASE+x;
     }
     return res;
 }
