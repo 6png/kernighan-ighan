@@ -3,7 +3,7 @@
 #include <stdio.h>
 
 int binsearch (int x, int v[], int n) {
-    int lo=0, hi=n-1, mid;
+    int lo=0, hi=n, mid;
 
     while (lo+1<hi) {
         int mid = (lo+hi)/2;
@@ -21,6 +21,6 @@ int binsearch (int x, int v[], int n) {
 }
 
 int main() {
-    int v[] = {1, 2, 3, 4, 5};
-    printf("%d should be 3\n", binsearch(4, v, 5));
+    int v[] = {1, 2, 3, 4, 5, 6, 7};
+    printf("%d should be 2\n", binsearch(3, v, 3));
 }
